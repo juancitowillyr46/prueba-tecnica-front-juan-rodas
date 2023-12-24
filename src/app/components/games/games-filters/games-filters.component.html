@@ -1,0 +1,39 @@
+<div class="mt-4 mt-lg-2 mt-xs-2">
+    <a>Filters</a>
+</div>
+<div class="row g-4 mt-2 mt-lg-0 mt-xs-2 mb-2 mb-md-2 mb-lg-0 mb-xs-0">
+  <div class="col-lg-3 col-xs-4 col-md-6 mt-2 mt-md-0 mt-lg-2">
+    <div class="mb-lg-3 mb-xs-0 mb-md-0 form-group">
+        <label for="name" class="form-label">Filter By Name:</label>
+        <input type="text" class="form-control" name="name" id="name" value="" [(ngModel)]="gamesQuery.name" placeholder="Example: Overwatch 2">
+    </div>
+  </div>
+  <div class="col-lg-3 col-xs-4 col-md-6 mt-2 mt-md-0 mt-lg-2">
+    <div class="mb-lg-3 mb-xs-0 mb-md-0 form-group">
+      <label for="gender" class="form-label">Filter By Gender:</label>
+      <select class="form-select" aria-label="Gender" name="category" [(ngModel)]="gamesQuery.category">
+          <option selected>Gender</option>
+          <option [value]="category.id" *ngFor="let category of categories;">{{category.name.toUpperCase()}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-lg-3 col-xs-4 col-md-6 mt-2 mt-md-0 mt-lg-2">
+    <div class="mb-lg-3 mb-xs-0 mb-md-0 form-group">
+      <label for="platform" class="form-label">Filter By Platform:</label>
+      <select class="form-select" aria-label="Platform" name="platform" [(ngModel)]="gamesQuery.platform">
+          <option selected>Platform</option>
+          <option [value]="platform.id" *ngFor="let platform of platforms;">{{platform.name.toUpperCase()}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-lg-3 col-xs-4 col-md-6 mt-2 mt-md-0 mt-lg-2 d-lg-flex align-items-end">
+    <div class="mb-lg-3 mb-xs-0 mb-md-0">
+      <div class="d-grid gap-2 d-md-block">
+          <a href="#" class="btn btn-primary m-2 mb-0" (click)="searchGames()">
+            Search 
+          </a>
+          <a href="#" class="btn btn-primary m-2 mb-0" (click)="clearSearchGames()">Clear search</a>
+      </div>
+    </div>
+  </div>
+</div>

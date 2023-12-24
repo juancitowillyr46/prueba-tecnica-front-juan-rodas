@@ -1,0 +1,26 @@
+.card-mouse-hover:hover {
+    cursor: pointer;
+    img {
+        opacity: 0.8;
+    }
+}
+
+.card {
+    .text-right {
+        text-align: right;
+    }
+}
+
+.card-badge {
+    display: block;
+    .badge{
+        display: inline-block;
+    }
+}
+
+.loading-custom {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 15px;
+}

@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row g-4 pt-4 text-left">
+    <div class="col-lg-12 col-xs-4 col-md-6 text-left">
+      <h1>
+        {{game?.title}} 
+        <a class="icon-link" href="{{game?.gameUrl}}" target="_blank" title="{{game?.title}} " alt="">
+          <i class="bi bi-link-45deg"></i>
+        </a>
+      </h1>
+      <p>{{game?.shortDescription}}</p>
+      <div class="info-custom mb-2">
+        <div class="mr-2"><span class="badge text-bg-success">Status: {{game?.status}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Genre: {{game?.genre}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Platform: {{game?.platform}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Publisher: {{game?.publisher}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Developer: {{game?.developer}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Release Date: {{game?.releaseDate}}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="row g-4 pt-2">
+    <div class="col-lg-12 col-xs-4 col-md-6 text-left">
+      <img [src]="game?.thumbnail" class="img-fluid" title="" alt="">
+    </div>
+  </div>
+  <div class="row g-4 pt-2 text-left">
+    <div class="col-lg-12 col-xs-4 col-md-6 text-left">
+      <h6>Description</h6>
+      <p>{{game?.description}}</p>
+    </div>
+  </div>
+  <div class="row g-4 pt-2 text-left">
+    <div class="col-lg-12 col-xs-4 col-md-6 text-left">
+      <h6>Screenshots</h6>
+    </div>
+  </div>
+  <div class="row g-4 pt-2">
+    <div class="col-lg-3 col-xs-4 col-md-6" *ngFor="let screenshot of game?.screenshots" >
+      <img [src]="screenshot.image" class="img-fluid img-fluid-height" title="" alt="">
+    </div>
+  </div>
+  <div class="row g-4 pt-4 text-left">
+    <div class="col-lg-12 col-xs-4 col-md-6 text-left">
+      <h6>Minimum System Requirements</h6>
+    </div>
+  </div>
+  <div class="row g-4 pt-2">
+    <div class="col-lg-12 col-xs-4 col-md-6">
+      <div class="info-custom mb-2">
+        <div class="mr-2"><span class="badge text-bg-success">OS: {{game?.minimumSystemRequirements?.os}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Processor: {{game?.minimumSystemRequirements?.processor}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Memory: {{game?.minimumSystemRequirements?.memory}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Graphics: {{game?.minimumSystemRequirements?.graphics}}</span></div>
+        <div class="mr-2"><span class="badge text-bg-primary">Storage: {{game?.minimumSystemRequirements?.storage}}</span></div>
+      </div>
+    </div>
+  </div>
+</div>
